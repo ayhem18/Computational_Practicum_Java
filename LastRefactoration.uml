@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>LastRefactoration</OriginalElement>
+  <nodes>
+    <node x="422.0" y="157.0">LastRefactoration.OneVarFunction</node>
+    <node x="163.0" y="314.0">LastRefactoration.Project2</node>
+    <node x="0.0" y="81.0">LastRefactoration.EulerMethod</node>
+    <node x="267.25" y="0.0">LastRefactoration.NumericalMethod</node>
+    <node x="540.0" y="81.0">LastRefactoration.RungeKuttaMethod</node>
+    <node x="219.0" y="157.0">LastRefactoration.TwoVarFunction</node>
+    <node x="0.0" y="238.0">LastRefactoration.Variant23Equation</node>
+    <node x="0.0" y="314.0">LastRefactoration.Controller</node>
+    <node x="19.0" y="157.0">LastRefactoration.FirstOrderDE</node>
+    <node x="314.0" y="314.0">LastRefactoration.Verifier</node>
+    <node x="378.0" y="81.0">LastRefactoration.ExactSolution</node>
+    <node x="157.0" y="81.0">LastRefactoration.ImprovedEulerMethod</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="LastRefactoration.Variant23Equation" target="LastRefactoration.FirstOrderDE" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="LastRefactoration.ExactSolution" target="LastRefactoration.NumericalMethod" relationship="GENERALIZATION">
+      <point x="5.6843418860808015E-14" y="-15.5" />
+      <point x="449.00000000000006" y="56.0" />
+      <point x="353.25" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="LastRefactoration.RungeKuttaMethod" target="LastRefactoration.NumericalMethod" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="630.5" y="56.0" />
+      <point x="353.25" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="LastRefactoration.EulerMethod" target="LastRefactoration.NumericalMethod" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="68.5" y="56.0" />
+      <point x="353.25" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+    <edge source="LastRefactoration.ImprovedEulerMethod" target="LastRefactoration.NumericalMethod" relationship="GENERALIZATION">
+      <point x="0.0" y="-15.5" />
+      <point x="257.5" y="56.0" />
+      <point x="353.25" y="56.0" />
+      <point x="0.0" y="15.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic" zoom="1.0" showDependencies="false" x="360.5" y="172.5" />
+  <SelectedNodes />
+  <Categories />
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

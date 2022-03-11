@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LastRefactoration.Controller">
+   <children>
+      <VBox prefHeight="600.0" prefWidth="280.0">
+         <children>
+            <Label prefHeight="33.0" prefWidth="99.0" text="X0:" />
+            <TextField prefHeight="25.0" prefWidth="118.0" fx:id="x0Field" />
+            <Label prefHeight="33.0" prefWidth="149.0" text="Y0:" />
+            <TextField fx:id="y0Field" />
+            <Label prefHeight="30.0" prefWidth="149.0" text="X:" />
+            <TextField prefHeight="26.0" prefWidth="149.0" fx:id="xMaxField" />
+            <Label prefHeight="27.0" prefWidth="149.0" text="N:" />
+            <TextField fx:id="NField" />
+            <Label prefHeight="27.0" prefWidth="149.0" text="n0:" />
+            <TextField fx:id="n0Field" />
+            <CheckBox fx:id="displayExact" mnemonicParsing="false" prefHeight="41.0" prefWidth="149.0" text="display Exact Solution" />
+            <CheckBox fx:id="displayEuler" mnemonicParsing="false" prefHeight="35.0" prefWidth="149.0" text="display Euler Method" />
+            <CheckBox fx:id="displayImprovedEuler" mnemonicParsing="false" prefHeight="36.0" prefWidth="192.0" text="display Improved Euler Method" />
+            <CheckBox fx:id="displayRungeKutta" mnemonicParsing="false" prefHeight="31.0" prefWidth="191.0" text="display Runge-Kutta Method" />
+         </children>
+      </VBox>
+      <TabPane prefHeight="600.0" prefWidth="702.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Solution And Approximations">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="571.0" prefWidth="600.0">
+                     <children>
+                        <LineChart fx:id="solutionGraph" prefHeight="486.0" prefWidth="625.0">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <Button layoutX="253.0" layoutY="496.0" mnemonicParsing="false" onAction="#displaySolution" prefHeight="52.0" prefWidth="168.0" text="display">
+                           <font>
+                              <Font name="System Italic" size="25.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Local Errors">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="571.0" prefWidth="594.0">
+                     <children>
+                        <LineChart fx:id="localErrorGraph" prefHeight="468.0" prefWidth="675.0">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <Button layoutX="231.0" layoutY="485.0" mnemonicParsing="false" onAction="#displayLocalErrors" prefHeight="52.0" prefWidth="149.0" text="display">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Global Errors">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <LineChart fx:id="globalErrorGraph" prefHeight="484.0" prefWidth="694.0">
+                          <xAxis>
+                            <NumberAxis side="BOTTOM" />
+                          </xAxis>
+                          <yAxis>
+                            <NumberAxis side="LEFT" />
+                          </yAxis>
+                        </LineChart>
+                        <Button layoutX="228.0" layoutY="496.0" mnemonicParsing="false" onAction="#displayGlobalErrors" prefHeight="52.0" prefWidth="155.0" text="display">
+                           <font>
+                              <Font size="25.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</HBox>
