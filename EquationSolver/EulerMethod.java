@@ -1,5 +1,6 @@
-package LastRefactoration;
+package EquationSolver;
 
+import Equations.FirstOrderDE;
 import javafx.scene.chart.XYChart;
 
 import java.math.BigDecimal;

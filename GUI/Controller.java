@@ -1,11 +1,13 @@
-package LastRefactoration;
+package GUI;
 
 
+import EquationSolver.*;
+import Equations.FirstOrderDE;
+import Equations.MyEquation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.LineChart;
-import javafx.scene.chart.XYChart;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.CheckBox;
@@ -36,8 +38,6 @@ public class Controller implements Initializable {
     // the numerical methods used in the applications
     private NumericalMethod euler, improvedEuler,runge_Kutta,exactSolution;
 
-    // the equation we are considering
-    //private OurEquation ourEquation;
 
     private FirstOrderDE ourEquation ;
 
@@ -56,14 +56,14 @@ public class Controller implements Initializable {
         X = xMaxField.getText(); N = NField.getText(); n0 = n0Field.getText();
 
         //verify the format of the input
-        String format = CP_DE.Verifier.validateFormat(x0, y0, X, N, n0);
-        if (!format.equals(CP_DE.Verifier.VALID_INPUT)) {
+        String format = Verifier.validateFormat(x0, y0, X, N, n0);
+        if (!format.equals(Verifier.VALID_INPUT)) {
             showAlert(format);
             return false;
         }
         //verify the mathematical constraints
-        String math = CP_DE.Verifier.validateMath(x0, y0, X, N, n0);
-        if(!math.equals(CP_DE.Verifier.VALID_INPUT)){
+        String math = Verifier.validateMath(x0, y0, X, N, n0);
+        if(!math.equals(Verifier.VALID_INPUT)){
             showAlert(math);
             return false;
         }
@@ -216,7 +216,7 @@ public class Controller implements Initializable {
         improvedEuler = new ImprovedEulerMethod();
         runge_Kutta = new RungeKuttaMethod();
         //ourEquation = new OurEquation();
-        ourEquation = new Variant23Equation();
+        ourEquation = new MyEquation();
     }
 
 

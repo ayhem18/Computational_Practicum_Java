@@ -1,4 +1,4 @@
-package LastRefactoration;
+package Equations;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
@@ -30,7 +30,7 @@ public abstract class FirstOrderDE {
 
     // this method is used to update the parameters whenever they are changed by the user
     // which changes the value of the exact solution
-    protected void updateIVP( String x0, String y0, String xMax, String N){
+    public void updateIVP( String x0, String y0, String xMax, String N){
         this.exactSolution = getIVPSolution(x0,y0);
         this.x0 =  new BigDecimal(x0);
         this.y0 = new BigDecimal(y0);

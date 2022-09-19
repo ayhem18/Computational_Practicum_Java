@@ -1,5 +1,6 @@
-package LastRefactoration;//package Computational_Practicum;
+package EquationSolver;//package Computational_Practicum;
 
+import Equations.FirstOrderDE;
 import javafx.scene.chart.XYChart;
 
 import java.math.BigDecimal;

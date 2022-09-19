@@ -1,4 +1,4 @@
-package LastRefactoration;
+package GUI;
 
 
 public class Verifier {

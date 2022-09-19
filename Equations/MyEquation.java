@@ -1,10 +1,10 @@
-package LastRefactoration;
+package Equations;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 
-public class Variant23Equation extends FirstOrderDE{
+public class MyEquation extends FirstOrderDE{
     // the precision used to calculate the square roots
     private static final MathContext PRECISION = new MathContext(15);
     // the value of 2 as BigDecimal
@@ -57,7 +57,7 @@ public class Variant23Equation extends FirstOrderDE{
         };
     }
 
-    public Variant23Equation(){
+    public MyEquation(){
         super(RIGHT_HAND_SIDE);
     }
 
